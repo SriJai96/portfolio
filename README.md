@@ -49,11 +49,6 @@ Projects: Showcasing real-world projects and case studies
 Contact: Get in touch via email or social platforms
 
 
-🚀 Live Demo
-
-🔗 Click here to view my portfolio
- (Replace with your hosted link)
-
 
 🤝 Connect With Me
 
