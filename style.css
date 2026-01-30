@@ -608,3 +608,196 @@ footer {
 }
 
 
+/* =================== MOBILE RESPONSIVE FIX =================== */
+
+/* Tablets & below */
+@media (max-width: 992px) {
+
+  header {
+    padding: 15px 5%;
+  }
+
+  nav a {
+    margin-left: 25px;
+    font-size: 1.6rem;
+  }
+
+  .home {
+    gap: 4rem;
+  }
+
+  .home-img img {
+    width: 35vw;
+  }
+
+  .about-card {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px;
+  }
+
+  .about-left h2 {
+    font-size: 48px;
+    text-align: center;
+  }
+
+  .education .boxes .box:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 10px;
+    font-size: 1.4rem;
+  }
+
+  section {
+    padding: 7rem 5% 4rem;
+  }
+
+  .home {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .home-content h1 {
+    font-size: 3.8rem;
+  }
+
+  .home-content h3 {
+    font-size: 2.6rem;
+  }
+
+  .typing-text {
+    font-size: 2.2rem;
+  }
+
+  .home-img img {
+    width: 260px;
+  }
+
+  .about-left h2 {
+    font-size: 36px;
+  }
+
+  .education .boxes .box {
+    margin: 20px;
+  }
+
+  .education .box.reveal-left,
+  .education .box.reveal-right,
+  .education .box.reveal-bottom {
+    transform: translateY(60px);
+  }
+
+  .skills .skill-boxes {
+    gap: 30px;
+  }
+
+  .skill {
+    width: 220px;
+  }
+
+  .project-card {
+    width: 280px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+  html {
+    font-size: 56%;
+  }
+
+  .home-content h1 {
+    font-size: 3.2rem;
+  }
+
+  .home-content h3 {
+    font-size: 2.2rem;
+  }
+
+  .about-left h2 {
+    font-size: 32px;
+  }
+
+  .skill {
+    width: 200px;
+  }
+
+  footer {
+    font-size: 13px;
+  }
+}
+/* ================= FIX ONLY HORIZONTAL OVERFLOW ================= */
+
+/* Mobile & Tablet */
+@media (max-width: 768px) {
+
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  /* Fix navbar pushing content */
+  nav a {
+    margin-left: 12px !important;
+    margin-right: 12px;
+  }
+
+  /* Reduce side padding slightly */
+  section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  /* Disable hover scaling on mobile */
+  .education .boxes .box:hover,
+  .skill:hover,
+  .project-card:hover {
+    transform: none;
+  }
+
+  /* Limit animation distance (no off-screen overflow) */
+  .education .box.reveal-left {
+    transform: translateX(-120px);
+  }
+
+  .education .box.reveal-right {
+    transform: translateX(120px);
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+  nav a {
+    font-size: 1.4rem;
+  }
+}
+/* ===== MOVE HOME IMAGE MORE DOWN (MOBILE) ===== */
+@media (max-width: 768px) {
+
+  .home {
+    padding-top: 13rem;   /* increase this for more down */
+  }
+
+  .home-img {
+    margin-top: 3.5rem;  /* fine control */
+  }
+}
