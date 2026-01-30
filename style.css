@@ -267,31 +267,60 @@ section{
     border-top-right-radius:10% ;
 
 }
-.about-topic{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+/* ===== ABOUT CARD (QUOTE STYLE) ===== */
+
+.about-card {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 60px;
+  padding: 60px;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    #2B0C0E 0%,
+    #2B0C0E 50%,
+    #1c0709 50%,
+    #1c0709 100%
+  );
+  box-shadow: 0 0 25px rgba(196, 101, 101, 0.3);
 }
-/* .about-topics{
-    width: 70%;
-    margin-left: 200px;
-} */
-.about-topics p{
-    font-size: 25px;
-text-align: right;
+
+/* LEFT SIDE */
+.about-left h2 {
+  font-size: 64px;
+  line-height: 1.1;
+  font-weight: 900;
+  color: #c46565;
 }
-.about-topics ul {
-    margin-bottom: 10px;
-    font-size: 25px;
-    text-align: right;
-    padding-top: 60px;
-list-style-type: none;
+
+/* RIGHT SIDE */
+.about-right h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #c46565;
 }
-.about-topics ul span{
-    text-shadow: 0 0 10px #c46565;
-    font-weight:600;
+
+.about-right p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #ffffff;
 }
+
+.about-right ul {
+  list-style: none;
+}
+
+.about-right ul li {
+  font-size: 18px;
+  margin-bottom: 14px;
+}
+
+.about-right ul span {
+  color: #c46565;
+  font-weight: 600;
+}
+
 
 
 
@@ -486,6 +515,96 @@ footer {
     padding: 40px;
     color: white;
     border-top: 2px solid #c46565;
+}
+
+/* ===== Scroll Reveal Animation ===== */
+
+.reveal,
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 1s ease;
+}
+
+.reveal-left {
+  transform: translateX(-80px);
+}
+
+.reveal-right {
+  transform: translateX(80px);
+}
+
+.reveal.active,
+.reveal-left.active,
+.reveal-right.active {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* ===== Education Scroll Animation ===== */
+
+.reveal-left,
+.reveal-right,
+.reveal-bottom {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+/* From LEFT */
+.reveal-left {
+  transform: translateX(-120px);
+}
+
+/* From RIGHT */
+.reveal-right {
+  transform: translateX(120px);
+}
+
+/* From BOTTOM (center box) */
+.reveal-bottom {
+  transform: translateY(120px);
+}
+
+/* Active State */
+.reveal-left.active,
+.reveal-right.active,
+.reveal-bottom.active {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* ===== EDUCATION BOXES – SLOW & FAR ANIMATION ===== */
+
+.education .box.reveal-left,
+.education .box.reveal-right,
+.education .box.reveal-bottom {
+  opacity: 0;
+  transition: transform 2.2s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 2.2s ease;
+}
+
+/* FAR LEFT */
+.education .box.reveal-left {
+  transform: translateX(-500px);
+}
+
+/* FAR RIGHT */
+.education .box.reveal-right {
+  transform: translateX(500px);
+}
+
+/* FROM BOTTOM */
+.education .box.reveal-bottom {
+  transform: translateY(280px);
+}
+
+/* ACTIVE STATE */
+.education .box.reveal-left.active,
+.education .box.reveal-right.active,
+.education .box.reveal-bottom.active {
+  opacity: 1;
+  transform: translate(0);
 }
 
 
